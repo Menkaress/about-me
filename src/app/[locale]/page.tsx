@@ -1,15 +1,15 @@
-'use client';
-
 import Image from 'next/image';
-import { useTranslations } from '../../hooks/useTranslations';
-import { useParams } from 'next/navigation';
 import Link from 'next/link';
+import { getTranslations } from '../../utils/translations';
 
-export default function Home() {
-  const t = useTranslations();
-  const params = useParams();
-  const currentLocale = params.locale as string;
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
 
+export default async function Home({ params }: PageProps) {
+  const { locale } = await params;
+  const t = await getTranslations(locale);
+  
   const locales = [
     { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
     { code: 'en', name: 'English', flag: '🇺🇸' },
@@ -34,23 +34,23 @@ export default function Home() {
           <div className="flex items-center space-x-4">
             <div className="relative group">
               <button className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors">
-                <span>{locales.find(l => l.code === currentLocale)?.flag}</span>
-                <span className="hidden md:block">{locales.find(l => l.code === currentLocale)?.name}</span>
+                <span>{locales.find(l => l.code === locale)?.flag}</span>
+                <span className="hidden md:block">{locales.find(l => l.code === locale)?.name}</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                {locales.map((locale) => (
+              <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                {locales.map((localeOption) => (
                   <Link
-                    key={locale.code}
-                    href={`/${locale.code}`}
+                    key={localeOption.code}
+                    href={`/${localeOption.code}`}
                     className={`flex items-center space-x-3 px-4 py-2 text-sm hover:bg-gray-50 first:rounded-t-lg last:rounded-b-lg ${
-                      currentLocale === locale.code ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
+                      locale === localeOption.code ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
                     }`}
                   >
-                    <span>{locale.flag}</span>
-                    <span>{locale.name}</span>
+                    <span>{localeOption.flag}</span>
+                    <span>{localeOption.name}</span>
                   </Link>
                 ))}
               </div>

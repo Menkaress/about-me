@@ -1,15 +1,22 @@
-name: Deploy to GitHub Pages
+name: Build and Deploy SSR Application
 
 on:
   push:
     branches:
-      - main  # or your default branch
+      - main
+  pull_request:
+    branches:
+      - main
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: "deployment"
+  cancel-in-progress: false
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -19,20 +26,40 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm'
 
       - name: Install pnpm
         run: npm install -g pnpm
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
-      - name: Build and export
+      - name: Build application
+        run: pnpm build
+
+      - name: Test application start
         run: |
-          pnpm build
-          pnpm export
+          # Start the application in background
+          pnpm start &
+          APP_PID=$!
+          
+          # Wait for app to start
+          sleep 10
+          
+          # Test if app is responding
+          curl -f http://localhost:3000 || (echo "App failed to start" && kill $APP_PID && exit 1)
+          
+          # Clean up
+          kill $APP_PID
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out 
+          name: nextjs-build
+          path: |
+            .next/
+            public/
+            package.json
+            next.config.ts
+            messages/
+          retention-days: 30
