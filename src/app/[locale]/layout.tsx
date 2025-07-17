@@ -16,11 +16,11 @@ const locales = ['en', 'de', 'ru'];
 
 interface LocaleLayoutProps {
   children: ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
-export default function LocaleLayout({ children, params }: LocaleLayoutProps) {
-  const { locale } = params;
+export default async function LocaleLayout({ children, params }: LocaleLayoutProps) {
+  const { locale } = await params;
   if (!locales.includes(locale)) notFound();
 
   return (

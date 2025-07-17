@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 
 export default function Home() {
@@ -87,7 +89,7 @@ export default function Home() {
           </div>
           <div className="flex justify-between">
             <span className="font-semibold">08.2012 – 07.2017</span>
-            <span>Lyceum „Titu Maiorescu", Chisinău, Moldawien</span>
+            <span>Lyceum &quot;Titu Maiorescu&quot;, Chisinău, Moldawien</span>
           </div>
         </div>
       </section>
