@@ -1,0 +1,89 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Über mich",
+    "skills": "Fähigkeiten",
+    "education": "Ausbildung",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "greeting": "👋 Hallo, ich bin",
+    "name": "Maksim",
+    "surname": "Bogachuk",
+    "description": "Angehender Frontend-Entwickler mit einer Leidenschaft für die Erstellung ansprechender und übersichtlicher Benutzeroberflächen.",
+    "contactButton": "Kontaktiere mich",
+    "learnMoreButton": "Mehr erfahren"
+  },
+  "about": {
+    "label": "Über mich",
+    "title": "Kreativität trifft auf",
+    "titleHighlight": "Technologie",
+    "description1": "Ich bin ein motivierter Web-Entwickler mit Erfahrung in HTML, CSS und JavaScript. Meine Reise in die Welt der Webentwicklung begann aus purer Neugier und hat sich zu einer echten Leidenschaft entwickelt.",
+    "description2": "Geboren in Moldawien, lebe ich jetzt in Deutschland und bringe eine internationale Perspektive in meine Arbeit ein. In meiner Freizeit spiele ich Volleyball, schwimme und erstelle Websites.",
+    "experienceYears": "Jahre Erfahrung",
+    "projectsCount": "Projekte",
+    "cardTitle": "Frontend Development",
+    "cardSubtitle": "Moderne Webtechnologien"
+  },
+  "skills": {
+    "label": "Fähigkeiten",
+    "title": "Meine Expertise",
+    "description": "Eine Übersicht über meine technischen Fähigkeiten und Kompetenzen",
+    "frontend": "Frontend",
+    "otherSkills": "Weitere Fähigkeiten",
+    "languages": "Sprachen",
+    "license": "Führung",
+    "skills": {
+      "html": "HTML5",
+      "css": "CSS3",
+      "javascript": "JavaScript",
+      "msOffice": "MS Office",
+      "adventure": "Abenteuerlust",
+      "independent": "Selbstständig",
+      "russian": "Russisch",
+      "german": "Deutsch",
+      "english": "Englisch",
+      "drivingLicense": "Führerschein B"
+    }
+  },
+  "education": {
+    "label": "Bildungsweg",
+    "title": "Ausbildung",
+    "description": "Mein akademischer Werdegang und meine Entwicklung",
+    "entries": {
+      "gymnasium": {
+        "title": "Lichtenberg-Oberstufengymnasium",
+        "subtitle": "Abitur, Bruchköbel",
+        "description": "Schwerpunkt auf Mathematik und Naturwissenschaften",
+        "period": "09.2022 – 07.2024"
+      },
+      "realschule": {
+        "title": "Realschule",
+        "subtitle": "Qualifizierender Realschulabschluss",
+        "description": "Grundlagen in verschiedenen Fachbereichen",
+        "period": "09.2017 – 07.2022"
+      },
+      "lyceum": {
+        "title": "Lyceum \"Titu Maiorescu\"",
+        "subtitle": "Chisinău, Moldawien",
+        "description": "Internationale Grundausbildung",
+        "period": "08.2012 – 07.2017"
+      }
+    }
+  },
+  "contact": {
+    "label": "Kontakt",
+    "title": "Lass uns zusammenarbeiten",
+    "description": "Hast du ein Projekt im Kopf? Lass uns darüber sprechen und gemeinsam etwas Großartiges schaffen.",
+    "email": "E-Mail",
+    "location": "Standort",
+    "status": "Status",
+    "locationValue": "Deutschland, Hessen, Frankfurt am Main",
+    "statusValue": "Verfügbar für Projekte",
+    "sendEmailButton": "E-Mail senden",
+    "backToTopButton": "Nach oben"
+  },
+  "footer": {
+    "copyright": "© 2024 Maksim Bogachuk. Alle Rechte vorbehalten."
+  }
+} 

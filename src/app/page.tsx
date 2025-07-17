@@ -7,10 +7,10 @@ export default function Home() {
       <header className="flex justify-between items-center py-6 px-8 border-b">
         <h1 className="text-2xl font-bold">Maksim Bogachuk</h1>
         <nav className="space-x-8">
-          <a href="#about" className="hover:underline">About</a>
-          <a href="#skills" className="hover:underline">Skills</a>
-          <a href="#education" className="hover:underline">Education</a>
-          <a href="#contact" className="hover:underline">Contact</a>
+          <a href="#about" className="hover:underline"></a>
+          <a href="#skills" className="hover:underline"></a>
+          <a href="#education" className="hover:underline"></a>
+          <a href="#contact" className="hover:underline"></a>
         </nav>
       </header>
 
@@ -24,15 +24,15 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="flex flex-col md:flex-row items-center gap-8 py-16 px-8 bg-gray-50" id="about">
-        <div className="flex-shrink-0">
-          <Image src="/profile.jpg" alt="Profilfoto" width={180} height={180} className="rounded-full object-cover" />
-        </div>
-        <div>
+      <section className="flex flex-col md:flex-row items-center justify-between gap-8 py-16 px-8 bg-gray-50" id="about">
+        <div className="flex-1 order-2 md:order-1">
           <h3 className="text-3xl font-bold mb-2">Über mich</h3>
           <p className="text-lg max-w-xl">
             Ich bin ein motivierter Web-Entwickler mit Erfahrung in HTML, CSS und JavaScript. In meiner Freizeit spiele ich Volleyball, schwimme und erstelle Websites. Geboren in Moldawien, lebe ich jetzt in Deutschland.
           </p>
+        </div>
+        <div className="flex-shrink-0 order-1 md:order-2 mb-8 md:mb-0">
+          <Image src="/profile.jpg" alt="Profilfoto" width={180} height={180} className="rounded-full object-cover" />
         </div>
       </section>
 
@@ -87,7 +87,7 @@ export default function Home() {
           </div>
           <div className="flex justify-between">
             <span className="font-semibold">08.2012 – 07.2017</span>
-            <span>Lyceum „Titu Maiorescu“, Chisinău, Moldawien</span>
+            <span>Lyceum „Titu Maiorescu", Chisinău, Moldawien</span>
           </div>
         </div>
       </section>

@@ -1,0 +1,89 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "👋 Hello, I'm",
+    "name": "Maksim",
+    "surname": "Bogachuk",
+    "description": "Aspiring Frontend Developer with a passion for creating engaging and intuitive user interfaces.",
+    "contactButton": "Contact me",
+    "learnMoreButton": "Learn more"
+  },
+  "about": {
+    "label": "About me",
+    "title": "Creativity meets",
+    "titleHighlight": "Technology",
+    "description1": "I am a motivated web developer with experience in HTML, CSS and JavaScript. My journey into the world of web development began out of pure curiosity and has developed into a real passion.",
+    "description2": "Born in Moldova, I now live in Germany and bring an international perspective to my work. In my free time, I play volleyball, swim and create websites.",
+    "experienceYears": "Years Experience",
+    "projectsCount": "Projects",
+    "cardTitle": "Frontend Development",
+    "cardSubtitle": "Modern Web Technologies"
+  },
+  "skills": {
+    "label": "Skills",
+    "title": "My Expertise",
+    "description": "An overview of my technical skills and competencies",
+    "frontend": "Frontend",
+    "otherSkills": "Other Skills",
+    "languages": "Languages",
+    "license": "License",
+    "skills": {
+      "html": "HTML5",
+      "css": "CSS3",
+      "javascript": "JavaScript",
+      "msOffice": "MS Office",
+      "adventure": "Adventurous",
+      "independent": "Independent",
+      "russian": "Russian",
+      "german": "German",
+      "english": "English",
+      "drivingLicense": "Driving License B"
+    }
+  },
+  "education": {
+    "label": "Education Path",
+    "title": "Education",
+    "description": "My academic journey and development",
+    "entries": {
+      "gymnasium": {
+        "title": "Lichtenberg Upper Secondary School",
+        "subtitle": "Abitur, Bruchköbel",
+        "description": "Focus on mathematics and natural sciences",
+        "period": "09.2022 – 07.2024"
+      },
+      "realschule": {
+        "title": "Secondary School",
+        "subtitle": "Qualifying Secondary School Certificate",
+        "description": "Foundations in various subject areas",
+        "period": "09.2017 – 07.2022"
+      },
+      "lyceum": {
+        "title": "Lyceum \"Titu Maiorescu\"",
+        "subtitle": "Chisinău, Moldova",
+        "description": "International basic education",
+        "period": "08.2012 – 07.2017"
+      }
+    }
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Let's work together",
+    "description": "Have a project in mind? Let's talk about it and create something great together.",
+    "email": "Email",
+    "location": "Location",
+    "status": "Status",
+    "locationValue": "Germany, Hessen, Frankfurt am Main",
+    "statusValue": "Available for projects",
+    "sendEmailButton": "Send email",
+    "backToTopButton": "Back to top"
+  },
+  "footer": {
+    "copyright": "© 2024 Maksim Bogachuk. All rights reserved."
+  }
+} 
