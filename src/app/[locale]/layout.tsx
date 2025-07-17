@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import { notFound } from 'next/navigation';
 
@@ -13,14 +14,13 @@ const geistMono = Geist_Mono({
 
 const locales = ['en', 'de', 'ru'];
 
-export default function LocaleLayout({
-  children,
-  params: {locale}
-}: {
-  children: React.ReactNode;
-  params: {locale: string};
-}) {
-  // Validate that the incoming `locale` parameter is valid
+interface LocaleLayoutProps {
+  children: ReactNode;
+  params: { locale: string };
+}
+
+export default function LocaleLayout({ children, params }: LocaleLayoutProps) {
+  const { locale } = params;
   if (!locales.includes(locale)) notFound();
 
   return (
