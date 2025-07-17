@@ -5,6 +5,12 @@ const defaultLocale = 'de';
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
+  
+  // Skip middleware for root path (handled by page.tsx redirect)
+  if (pathname === '/') {
+    return NextResponse.next();
+  }
+  
   const pathnameIsMissingLocale = locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   );
@@ -26,7 +32,7 @@ function getLocale(request: NextRequest): string {
   );
   if (locale) return locale;
 
-  // Use Accept-Language header to determine locale
+  // Use Accept-Language header to determine locale, but always fallback to German
   const acceptLanguage = request.headers.get('accept-language');
   if (acceptLanguage) {
     const preferredLocale = acceptLanguage
@@ -39,6 +45,7 @@ function getLocale(request: NextRequest): string {
     }
   }
 
+  // Always fallback to German
   return defaultLocale;
 }
 

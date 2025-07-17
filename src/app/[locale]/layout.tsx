@@ -25,7 +25,10 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
 
   return (
     <html lang={locale}>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body 
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning={true}
+      >
         {children}
       </body>
     </html>
